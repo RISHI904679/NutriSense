@@ -1,0 +1,1 @@
+package com.nutrisense.dto.report; import jakarta.validation.constraints.*; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class ReportRequest { @NotNull private ReportType reportType; public enum ReportType { WEEKLY,MONTHLY } }

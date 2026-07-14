@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.LoginHistory; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface LoginHistoryRepository extends JpaRepository<LoginHistory,Long>{ List<LoginHistory> findByUserIdOrderByLoginTimeDesc(Long userId); }

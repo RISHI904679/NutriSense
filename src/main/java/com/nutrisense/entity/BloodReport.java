@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.time.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="blood_reports") public class BloodReport { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) private User user; @Column(name="report_date") private LocalDate reportDate; @Column(name="report_file_url",length=500) private String reportFileUrl; @Lob @Column(columnDefinition="TEXT") private String remarks; @Column(name="created_at",insertable=false,updatable=false) private Instant createdAt; }

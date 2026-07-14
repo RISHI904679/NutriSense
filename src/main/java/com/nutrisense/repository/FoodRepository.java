@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.Food; import org.springframework.data.jpa.repository.*; import java.util.*; public interface FoodRepository extends JpaRepository<Food,Long>{ List<Food> findByFoodCategoryIdAndAvailableTrue(Long categoryId); List<Food> findByFoodNameContainingIgnoreCaseAndAvailableTrue(String name); }

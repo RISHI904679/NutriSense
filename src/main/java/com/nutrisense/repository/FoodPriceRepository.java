@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.FoodPrice; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface FoodPriceRepository extends JpaRepository<FoodPrice,Long>{ List<FoodPrice> findByFoodId(Long foodId); }

@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.ProgressLog; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ProgressLogRepository extends JpaRepository<ProgressLog,Long>{ List<ProgressLog> findByUserIdOrderByLogDateDesc(Long userId); }

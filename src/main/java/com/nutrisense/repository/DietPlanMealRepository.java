@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.DietPlanMeal; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface DietPlanMealRepository extends JpaRepository<DietPlanMeal,Long>{ List<DietPlanMeal> findByDietPlanId(Long dietPlanId); }

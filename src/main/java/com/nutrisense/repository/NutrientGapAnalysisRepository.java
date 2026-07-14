@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.NutrientGapAnalysis; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface NutrientGapAnalysisRepository extends JpaRepository<NutrientGapAnalysis,Long>{ List<NutrientGapAnalysis> findBySummaryId(Long summaryId); }

@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.Disease; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface DiseaseRepository extends JpaRepository<Disease,Long>{ Optional<Disease> findByDiseaseName(String diseaseName); List<Disease> findByActiveTrue(); }

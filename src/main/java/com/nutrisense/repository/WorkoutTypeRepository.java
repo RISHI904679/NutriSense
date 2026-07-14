@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.WorkoutType; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface WorkoutTypeRepository extends JpaRepository<WorkoutType,Long>{ Optional<WorkoutType> findByWorkoutName(String workoutName); List<WorkoutType> findByActiveTrue(); }

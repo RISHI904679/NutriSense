@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.NutrientMaster; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface NutrientMasterRepository extends JpaRepository<NutrientMaster,Long>{ Optional<NutrientMaster> findByNutrientName(String nutrientName); List<NutrientMaster> findByActiveTrue(); }

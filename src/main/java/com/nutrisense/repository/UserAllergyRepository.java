@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.UserAllergy; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface UserAllergyRepository extends JpaRepository<UserAllergy,Long>{ List<UserAllergy> findByUserId(Long userId); }

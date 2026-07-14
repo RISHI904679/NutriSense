@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.BodyMeasurement; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface BodyMeasurementRepository extends JpaRepository<BodyMeasurement,Long>{ List<BodyMeasurement> findByProgressLogId(Long progressLogId); }

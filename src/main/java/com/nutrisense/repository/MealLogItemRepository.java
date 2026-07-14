@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.MealLogItem; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface MealLogItemRepository extends JpaRepository<MealLogItem,Long>{ List<MealLogItem> findByMealLogId(Long mealLogId); }

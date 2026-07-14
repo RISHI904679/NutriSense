@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.ActivityLevel; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ActivityLevelRepository extends JpaRepository<ActivityLevel,Long>{ Optional<ActivityLevel> findByLevelName(String levelName); List<ActivityLevel> findByActiveTrue(); }

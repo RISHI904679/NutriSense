@@ -1,0 +1,1 @@
+package com.nutrisense.dto.auth; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class AuthResponse { private Long userId; private String email; private String accessToken; private String refreshToken; private String tokenType; private Long expiresIn; }

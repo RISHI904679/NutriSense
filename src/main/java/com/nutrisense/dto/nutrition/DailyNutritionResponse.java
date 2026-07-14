@@ -1,0 +1,1 @@
+package com.nutrisense.dto.nutrition; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class DailyNutritionResponse { private LocalDate summaryDate; private Double totalCalories; private Double totalWaterLiters; }

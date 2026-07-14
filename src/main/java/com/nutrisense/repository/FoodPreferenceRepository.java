@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.FoodPreference; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface FoodPreferenceRepository extends JpaRepository<FoodPreference,Long>{ Optional<FoodPreference> findByPreferenceName(String preferenceName); List<FoodPreference> findByActiveTrue(); }

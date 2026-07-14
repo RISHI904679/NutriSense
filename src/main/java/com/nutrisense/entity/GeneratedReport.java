@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.time.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="generated_reports") public class GeneratedReport { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) private User user; @Enumerated(EnumType.STRING) @Column(name="report_type",length=10) private ReportType reportType; @Column(name="generated_date") private LocalDate generatedDate; @Column(name="report_file_url",length=500) private String reportFileUrl; @Column(name="created_at",insertable=false,updatable=false) private Instant createdAt; public enum ReportType { WEEKLY,MONTHLY } }

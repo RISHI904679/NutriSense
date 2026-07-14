@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.WaterLog; import org.springframework.data.jpa.repository.JpaRepository; import java.time.*; import java.util.*; public interface WaterLogRepository extends JpaRepository<WaterLog,Long>{ List<WaterLog> findByUserIdAndLogDatetimeBetween(Long userId, LocalDateTime from, LocalDateTime to); }

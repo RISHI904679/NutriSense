@@ -1,0 +1,1 @@
+package com.nutrisense.dto.auth; import jakarta.validation.constraints.*; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class RegisterRequest { @NotBlank @Email private String email; @NotBlank @Size(min=8,max=100) private String password; @Pattern(regexp="^$|^[+]?[0-9]{7,20}$") private String phoneNumber; }

@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.Allergy; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface AllergyRepository extends JpaRepository<Allergy,Long>{ Optional<Allergy> findByAllergyName(String allergyName); List<Allergy> findByActiveTrue(); }

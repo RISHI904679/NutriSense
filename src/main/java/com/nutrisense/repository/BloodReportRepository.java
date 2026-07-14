@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.BloodReport; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface BloodReportRepository extends JpaRepository<BloodReport,Long>{ List<BloodReport> findByUserIdOrderByReportDateDesc(Long userId); }

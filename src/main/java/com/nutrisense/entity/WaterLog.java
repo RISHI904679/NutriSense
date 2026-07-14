@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.math.*; import java.time.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="water_logs") public class WaterLog { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) private User user; @Column(name="log_datetime",nullable=false) private LocalDateTime logDatetime; @Column(name="quantity_liters",nullable=false,precision=5,scale=2) private BigDecimal quantityLiters; @Column(name="created_at",insertable=false,updatable=false) private Instant createdAt; }

@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.time.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="meal_feedback") public class MealFeedback { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @OneToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="meal_log_id",nullable=false,unique=true) private MealLog mealLog; private Integer rating; @Lob @Column(columnDefinition="TEXT") private String comments; @Column(name="created_at",insertable=false,updatable=false) private Instant createdAt; }

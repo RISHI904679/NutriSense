@@ -1,0 +1,1 @@
+package com.nutrisense.dto.grocery; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class GroceryListResponse { private Long id; private String listName; private LocalDate startDate; private LocalDate endDate; }

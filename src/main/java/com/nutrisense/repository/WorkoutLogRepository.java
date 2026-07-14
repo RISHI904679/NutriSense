@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.WorkoutLog; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface WorkoutLogRepository extends JpaRepository<WorkoutLog,Long>{ List<WorkoutLog> findByUserIdOrderByWorkoutDateDesc(Long userId); }

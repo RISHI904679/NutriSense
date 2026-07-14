@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.DietPlan; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface DietPlanRepository extends JpaRepository<DietPlan,Long>{ List<DietPlan> findByUserIdAndActiveTrue(Long userId); }

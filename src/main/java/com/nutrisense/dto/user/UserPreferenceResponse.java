@@ -1,0 +1,1 @@
+package com.nutrisense.dto.user; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class UserPreferenceResponse { private Double dailyBudget; private Integer preferredMealCount; private Boolean likesSpicyFood; private Boolean receivesNotifications; }

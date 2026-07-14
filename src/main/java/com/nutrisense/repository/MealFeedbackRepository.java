@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.MealFeedback; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface MealFeedbackRepository extends JpaRepository<MealFeedback,Long>{ Optional<MealFeedback> findByMealLogId(Long mealLogId); }

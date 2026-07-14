@@ -1,0 +1,1 @@
+package com.nutrisense.dto.diet; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class DietPlanResponse { private Long id; private String planName; private Long goalTypeId; private Double totalCalories; private Double budget; private LocalDate startDate; private LocalDate endDate; private Boolean active; }

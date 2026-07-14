@@ -1,0 +1,1 @@
+package com.nutrisense.dto.workout; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class WorkoutLogResponse { private Long id; private Long workoutTypeId; private LocalDate workoutDate; private Integer durationMinutes; private Double caloriesBurned; private String notes; }

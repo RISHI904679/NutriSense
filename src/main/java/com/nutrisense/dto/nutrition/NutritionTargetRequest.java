@@ -1,0 +1,1 @@
+package com.nutrisense.dto.nutrition; import jakarta.validation.constraints.*; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class NutritionTargetRequest { @Positive private Double targetCalories; @Positive private Double targetProtein; @Positive private Double targetCarbs; @Positive private Double targetFat; @Positive private Double targetWaterLiters; }

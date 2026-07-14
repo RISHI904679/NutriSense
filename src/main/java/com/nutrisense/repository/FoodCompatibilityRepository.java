@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.FoodCompatibility; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface FoodCompatibilityRepository extends JpaRepository<FoodCompatibility,Long>{ Optional<FoodCompatibility> findByFoodIdAndDiseaseId(Long foodId, Long diseaseId); }

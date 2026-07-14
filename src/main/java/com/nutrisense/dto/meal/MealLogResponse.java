@@ -1,0 +1,1 @@
+package com.nutrisense.dto.meal; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class MealLogResponse { private Long id; private Long mealTypeId; private LocalDateTime mealDatetime; private String notes; }

@@ -1,0 +1,1 @@
+package com.nutrisense.dto.grocery; import jakarta.validation.constraints.*; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class GroceryListRequest { @NotBlank @Size(max=150) private String listName; private LocalDate startDate; private LocalDate endDate; }

@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.FoodCategory; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface FoodCategoryRepository extends JpaRepository<FoodCategory,Long>{ Optional<FoodCategory> findByCategoryName(String categoryName); List<FoodCategory> findByActiveTrue(); }

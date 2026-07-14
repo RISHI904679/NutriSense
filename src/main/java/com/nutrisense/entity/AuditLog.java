@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.time.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="audit_logs") public class AuditLog { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY) @JoinColumn(name="user_id") private User user; @Column(length=255) private String action; @Column(name="entity_name",length=100) private String entityName; @Column(name="entity_id") private Long entityId; @Column(name="action_time",insertable=false,updatable=false) private Instant actionTime; @Column(name="ip_address",length=45) private String ipAddress; }

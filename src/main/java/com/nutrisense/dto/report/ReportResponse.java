@@ -1,0 +1,1 @@
+package com.nutrisense.dto.report; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class ReportResponse { private Long id; private String reportType; private LocalDate generatedDate; private String reportFileUrl; }

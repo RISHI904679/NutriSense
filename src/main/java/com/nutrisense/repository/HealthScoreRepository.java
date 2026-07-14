@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.HealthScore; import org.springframework.data.jpa.repository.JpaRepository; import java.time.*; import java.util.*; public interface HealthScoreRepository extends JpaRepository<HealthScore,Long>{ Optional<HealthScore> findByUserIdAndScoreDate(Long userId, LocalDate scoreDate); }

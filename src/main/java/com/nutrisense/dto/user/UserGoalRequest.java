@@ -1,0 +1,1 @@
+package com.nutrisense.dto.user; import jakarta.validation.constraints.*; import lombok.*; import java.time.*; @Data @NoArgsConstructor @AllArgsConstructor public class UserGoalRequest { @NotNull private Long goalTypeId; @Positive private Double targetWeightKg; @Positive private Integer targetCalories; @Future private LocalDate targetDate; }

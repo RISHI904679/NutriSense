@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.GoalType; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface GoalTypeRepository extends JpaRepository<GoalType,Long>{ Optional<GoalType> findByGoalName(String goalName); List<GoalType> findByActiveTrue(); }

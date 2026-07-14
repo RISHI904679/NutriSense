@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.time.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="grocery_lists") public class GroceryList { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) private User user; @Column(name="list_name",length=150) private String listName; @Column(name="start_date") private LocalDate startDate; @Column(name="end_date") private LocalDate endDate; @Column(name="created_at",insertable=false,updatable=false) private Instant createdAt; }

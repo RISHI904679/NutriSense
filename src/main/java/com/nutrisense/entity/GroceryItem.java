@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.math.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="grocery_items") public class GroceryItem { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="grocery_list_id",nullable=false) private GroceryList groceryList; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="food_id",nullable=false) private Food food; @Column(precision=8,scale=2) private BigDecimal quantity; @Column(length=20) private String unit; @Column(name="is_purchased") private Boolean purchased; }

@@ -1,0 +1,3 @@
+package com.nutrisense.entity;
+import jakarta.persistence.*; import lombok.*; import java.time.*;
+@Getter @Setter @Builder @NoArgsConstructor @AllArgsConstructor @Entity @Table(name="notifications") public class Notification { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id",nullable=false) private User user; @Column(length=200) private String title; @Lob @Column(columnDefinition="TEXT") private String message; @Column(name="notification_type",length=50) private String notificationType; @Column(name="is_read") private Boolean read; @Column(name="created_at",insertable=false,updatable=false) private Instant createdAt; }

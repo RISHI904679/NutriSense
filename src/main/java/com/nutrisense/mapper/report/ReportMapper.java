@@ -1,0 +1,1 @@
+package com.nutrisense.mapper.report; import com.nutrisense.dto.report.*; import com.nutrisense.entity.GeneratedReport; import org.mapstruct.*; @Mapper(componentModel="spring",unmappedTargetPolicy=ReportingPolicy.IGNORE) public interface ReportMapper { ReportResponse toResponse(GeneratedReport entity); }

@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.AuditLog; import org.springframework.data.jpa.repository.JpaRepository; import java.time.*; import java.util.*; public interface AuditLogRepository extends JpaRepository<AuditLog,Long>{ List<AuditLog> findByUserIdOrderByActionTimeDesc(Long userId); List<AuditLog> findByActionTimeBetween(Instant from, Instant to); }

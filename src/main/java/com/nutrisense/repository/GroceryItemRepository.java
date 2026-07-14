@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.GroceryItem; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface GroceryItemRepository extends JpaRepository<GroceryItem,Long>{ List<GroceryItem> findByGroceryListId(Long groceryListId); }

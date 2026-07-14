@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.UserDisease; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface UserDiseaseRepository extends JpaRepository<UserDisease,Long>{ List<UserDisease> findByUserIdAndActiveTrue(Long userId); }

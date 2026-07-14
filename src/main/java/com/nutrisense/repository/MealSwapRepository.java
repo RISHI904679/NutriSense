@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.MealSwap; import org.springframework.data.jpa.repository.JpaRepository; public interface MealSwapRepository extends JpaRepository<MealSwap,Long>{}

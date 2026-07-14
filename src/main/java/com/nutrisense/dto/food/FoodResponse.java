@@ -1,0 +1,1 @@
+package com.nutrisense.dto.food; import lombok.*; @Data @NoArgsConstructor @AllArgsConstructor public class FoodResponse { private Long id; private String foodName; private String scientificName; private Long categoryId; private Long foodPreferenceId; private String imageUrl; private String description; private Boolean available; }

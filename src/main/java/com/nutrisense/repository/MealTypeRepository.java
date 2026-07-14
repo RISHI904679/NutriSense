@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.MealType; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface MealTypeRepository extends JpaRepository<MealType,Long>{ Optional<MealType> findByMealName(String mealName); List<MealType> findByActiveTrue(); }

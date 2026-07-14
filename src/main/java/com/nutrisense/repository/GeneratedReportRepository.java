@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.GeneratedReport; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface GeneratedReportRepository extends JpaRepository<GeneratedReport,Long>{ List<GeneratedReport> findByUserIdOrderByGeneratedDateDesc(Long userId); }

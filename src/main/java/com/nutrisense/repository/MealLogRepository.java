@@ -1,0 +1,1 @@
+package com.nutrisense.repository; import com.nutrisense.entity.MealLog; import org.springframework.data.jpa.repository.JpaRepository; import java.time.*; import java.util.*; public interface MealLogRepository extends JpaRepository<MealLog,Long>{ List<MealLog> findByUserIdAndMealDatetimeBetween(Long userId, LocalDateTime from, LocalDateTime to); }
